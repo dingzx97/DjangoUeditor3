@@ -1,8 +1,8 @@
 # coding:utf-8
 from django import forms
-from  DjangoUeditor.widgets import UEditorWidget
-from  DjangoUeditor.forms import UEditorField, UEditorModelForm
-from models import Blog
+from DjangoUeditor.widgets import UEditorWidget
+from DjangoUeditor.forms import UEditorField, UEditorModelForm
+from .models import Blog
 
 
 class TestUEditorForm(forms.Form):
@@ -16,3 +16,4 @@ class TestUEditorForm(forms.Form):
 class UEditorTestModelForm(UEditorModelForm):
     class Meta:
         model = Blog
+        fields = ()

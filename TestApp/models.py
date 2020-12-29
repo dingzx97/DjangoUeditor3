@@ -56,7 +56,7 @@ class myCombo(UEditorComboCommand):
         """
     def get_items(self):
         items=[]
-        for i in xrange(10):
+        for i in range(10):
             items.append({
                 "label":"combo_%s" % i,
                 "value":i

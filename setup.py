@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 from distutils.command.install_data import install_data
 from distutils.command.install import INSTALL_SCHEMES
 import os
@@ -68,6 +68,8 @@ if len(sys.argv) > 1 and sys.argv[1] == 'bdist_wininst':
 # Dynamically calculate the version based on django.VERSION.
 version = "1.8.143"
 
+REQUIREMENTS = ['six']
+
 setup(
     name = "DjangoUeditor",
     version = version,
@@ -77,6 +79,7 @@ setup(
     description = 'A Django application for Baidu Ueditor.',
     download_url = 'http://github.com/zhangfisher/DjangoUeditor',
     packages = packages,
+    install_requires = REQUIREMENTS,
     cmdclass = cmdclasses,
     data_files = data_files,
     classifiers = [
